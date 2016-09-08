@@ -1,3 +1,8 @@
+# Groceries Sample Application Using Firebase as a Backend
+
+
+
+
 
 <!--
 # Groceries [![Build Status](https://travis-ci.org/NativeScript/sample-Groceries.svg?branch=master)](https://travis-ci.org/NativeScript/sample-Groceries) [![dependency status](https://david-dm.org/nativescript/sample-Groceries.svg)](https://david-dm.org/nativescript/sample-Groceries) [![devDependency Status](https://david-dm.org/nativescript/sample-Groceries/dev-status.svg)](https://david-dm.org/nativescript/sample-Groceries#info=devDependencies)
