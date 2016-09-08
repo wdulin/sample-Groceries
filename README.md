@@ -5,6 +5,7 @@
 Groceries is a NativeScript-built iOS and Android app for managing grocery lists. You can learn how to build a version of this app from scratch using either our [JavaScript getting started guide](http://docs.nativescript.org/tutorial/chapter-0), or our [TypeScript and Angular 2 getting started guide](http://docs.nativescript.org/angular/tutorial/ng-chapter-0).
 -->
 <!-- * [Download](#download) -->
+<h2> Original README.md content below </h2>
 
 * [Branches](#branches)
 * [Screenshots](#screenshots)
@@ -29,7 +30,7 @@ The latest version of Groceries is available on the iOS App Store as well as Goo
   <img src="assets/app-store-icons/google-play.png">
 </a>
 -->
-<h2> Original README.md content below </h2>
+
 <h2 id="branches">Branches</h2>
 
 This repository contains a number of branches:
