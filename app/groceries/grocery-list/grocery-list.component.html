@@ -1,5 +1,6 @@
+ <!-- NOTE: [row] sets the 0 based row position for the parent GridLayout -->
 <ListView
-  [row]="row"
+  [row]="row" 
   [class.visible]="listLoaded"
   [items]="store.items | async | itemStatus:showDeleted"
   (itemLoading)="makeBackgroundTransparent($event)" (loaded)="load()">
