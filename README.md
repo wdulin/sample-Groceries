@@ -1,4 +1,4 @@
-# Groceries Sample Application Using Firebase as a Backend
+# Nativescript Groceries Sample Application Using Firebase as a Backend
 
 
 
