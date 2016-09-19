@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy, EventEmitter, Input, Output } from "@angular/core";
 
-import { Grocery, GroceryService } from "../shared";
+import { FirebaseGrocery, GroceryFirebaseService } from "../shared";
 import { alert } from "../../shared";
 
 declare var UIColor: any;
@@ -19,7 +19,7 @@ export class GroceryListComponent {
 
   listLoaded = false;
 
-  constructor(private store: GroceryService) { }
+  constructor(private store: GroceryFirebaseService) { }
 
   load() {
     this.loading.next("");
@@ -49,14 +49,14 @@ export class GroceryListComponent {
     return grocery.done ? "res://checked" : "res://unchecked";
   }
 
-  toggleDone(grocery: Grocery) {
+  toggleDone(grocery: FirebaseGrocery) {
     this.store.toggleDoneFlag(grocery, this.showDeleted)
       .catch(() => {
         alert("An error occurred managing your grocery list.");
       });
   }
 
-  delete(grocery: Grocery) {
+  delete(grocery: FirebaseGrocery) {
     this.store.setDeleteFlag(grocery)
       .catch(() => {
         alert("An error occurred while deleting an item from your list.");

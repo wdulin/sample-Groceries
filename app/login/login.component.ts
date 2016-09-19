@@ -8,7 +8,7 @@ import { prompt } from "ui/dialogs";
 import { Page } from "ui/page";
 import { TextField } from "ui/text-field";
 
-import { alert, setHintColor, LoginService, User } from "../shared";
+import { alert, setHintColor, LoginFirebaseService, User } from "../shared";
 
 @Component({
   selector: "gr-login",
@@ -17,7 +17,7 @@ import { alert, setHintColor, LoginService, User } from "../shared";
 })
 export class LoginComponent implements OnInit {
   user: User;
-  isLoggingIn = true;
+  isLoggingIn = true;  // Toggles between login and signup
   isAuthenticating = false;
 
   @ViewChild("initialContainer") initialContainer: ElementRef;
@@ -29,10 +29,12 @@ export class LoginComponent implements OnInit {
   @ViewChild("password") password: ElementRef;
 
   constructor(private router: Router,
-    private userService: LoginService,
+    private userService: LoginFirebaseService,
     private page: Page) {
     this.user = new User();
-    this.user.email = "user@nativescript.org";
+    //this.user.email = "user@nativescript.org";
+    //this.user.password = "password";
+    this.user.email = "groceryapp@kingsburytx.com";
     this.user.password = "password";
   }
 
@@ -58,6 +60,7 @@ export class LoginComponent implements OnInit {
     }
   }
 
+  // * Access UserService
   login() {
     if (getConnectionType() === connectionType.none) {
       alert("Groceries requires an internet connection to log in.");
@@ -75,6 +78,7 @@ export class LoginComponent implements OnInit {
       });
   }
 
+  // Access UserService
   signUp() {
     if (getConnectionType() === connectionType.none) {
       alert("Groceries requires an internet connection to register.");
@@ -97,6 +101,7 @@ export class LoginComponent implements OnInit {
       });
   }
 
+  // Access UserService
   forgotPassword() {
     prompt({
       title: "Forgot Password",

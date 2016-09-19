@@ -7,14 +7,14 @@ import { TextField } from "ui/text-field";
 import * as SocialShare from "nativescript-social-share";
 
 import { GroceryListComponent } from "./grocery-list/grocery-list.component";
-import { GroceryService } from "./shared";
-import { LoginService, alert, setHintColor } from "../shared";
+import { GroceryFirebaseService } from "./shared";
+import { LoginFirebaseService, alert, setHintColor } from "../shared";
 
 @Component({
   selector: "gr-groceries",
   templateUrl: "groceries/groceries.component.html",
   styleUrls: ["groceries/groceries-common.css", "groceries/groceries.component.css"],
-  providers: [GroceryService]
+  providers: [GroceryFirebaseService]
 })
 export class GroceriesComponent implements OnInit {
   grocery: string = "";
@@ -25,8 +25,8 @@ export class GroceriesComponent implements OnInit {
   @ViewChild("groceryTextField") groceryTextField: ElementRef;
 
   constructor(private router: Router,
-    private store: GroceryService,
-    private loginService: LoginService,
+    private store: GroceryFirebaseService,
+    private loginService: LoginFirebaseService,
     private page: Page) {}
 
   ngOnInit() {

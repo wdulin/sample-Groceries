@@ -4,7 +4,7 @@ import { NativeScriptRouterModule } from "nativescript-angular/router";
 
 import { authProviders, appRoutes } from "./app.routing";
 import { AppComponent } from "./app.component";
-import { setStatusBarColors, BackendService, LoginService } from "./shared";
+import { setStatusBarColors, BackendFirebaseService, LoginFirebaseService } from "./shared";
 
 import { LoginModule } from "./login/login.module";
 import { GroceriesModule } from "./groceries/groceries.module";
@@ -13,8 +13,8 @@ setStatusBarColors();
 
 @NgModule({
   providers: [
-    BackendService,
-    LoginService,
+    BackendFirebaseService,
+    LoginFirebaseService,
     authProviders
   ],
   imports: [

@@ -38,7 +38,7 @@
       <TextField #email
         hint="Email Address"
         keyboardType="email"
-        returnKeyType="next"
+        returnKeyType="next" 
         (returnPress)="focusPassword()"
         [(ngModel)]="user.email"
         [isEnabled]="!isAuthenticating"
