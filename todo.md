@@ -3,10 +3,26 @@
 
 ## Next
 
-1. Order grocery list from newest to lowest
-2. Error: Logout creates firebase.database error
-3. Label truncation is too short in listview.
-4. 
+4. Working in iOS Emulator
+
+5. Forgot Password Working
+
+6. Clean-up/Refactor Code
+
+7. Gif of all three Working
+
+8. Instructions
+
+9. Post to Github
+
+
+## Done
+~~1. Order grocery list from newest to lowest~~ 
+
+~~2. Error: Logout creates firebase.database error~~
+
+~~3. Label truncation is too short in listview.~~
+
 
 
 # Feature Tests
@@ -19,6 +35,11 @@
 4. Clicking delete moves item to <Recent> list
 5. Clicking item in <Recent> list moves item to <Main Grocery List>
 6. Logout returns to <Login Screen> without error.
+7. Sign up New User Working
+8. Each user has own private grocery list
+9. Reset Password
+
+
 
 ### New Features in Advanced Grocery Example
 
@@ -28,6 +49,8 @@
 4. Permanent Delete button on <Recent> list
 5. Add picture to grocery items using Firebase storage
 6. Edit saved item
+7. Lookup Item with barcode
+
 
 
 ## Additional Ideas

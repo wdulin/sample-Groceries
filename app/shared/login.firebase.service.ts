@@ -1,4 +1,5 @@
 import { Injectable } from "@angular/core";
+import { Router } from "@angular/router";
 import { getString, setString } from "application-settings";
 
 import { User } from "./user.model";
@@ -23,7 +24,7 @@ export class LoginFirebaseService {
   }
   */
 
-  constructor(private backend: BackendFirebaseService) {
+  constructor(private backend: BackendFirebaseService, private router: Router) {
     /*  
     if (this.token) {
       this.backend.fb.authentication.setAuthorization(this.token, "bearer");
@@ -54,7 +55,10 @@ export class LoginFirebaseService {
   // TODO: Change to promise
   logoff() {
     this.backend.clearListeners();
-    this.backend.fb.logout();
+    this.backend.fb.logout().then( () => {
+      this.router.navigate(['/login']);
+      console.log("Log Out"); // DEBUG
+    }).catch(this.handleErrors);
   }
 
   resetPassword(email) {

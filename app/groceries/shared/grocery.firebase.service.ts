@@ -20,30 +20,38 @@ export class GroceryFirebaseService {
     }
 
   load() {
-    return this.addListeners();
+    return new Promise( (resolve, reject) => {
+      try {
+        this.addListeners();
+        resolve();
+      } catch (ex) {
+        reject(ex);
+      }
+    });
   }
 
   private addListeners() {
-    return this.backend.fb.addChildEventListener((result) => {
-        console.log(JSON.stringify(result));
-
-        if (result.type === "ChildAdded" || result.type === "ChildChanged") {
-          let newItem = new FirebaseGrocery(
-            result.key,
-            result.value.name,
-            result.value.done || false,
-            result.value.deleted || false,
-            result.value.dateCreated
-          );
-          this.updateListItem(newItem);
-          // this.allItems.push(newItem);
-        } else if (result.type === "ChildRemoved") {
-          this.deleteListItem(result.key);
+    this.backend.fb.addChildEventListener((result) => {
+        console.log(JSON.stringify(result));  // DEBUG
+        if (this.backend.loggedIn) {
+          if (result.type === "ChildAdded" || result.type === "ChildChanged") {
+            let newItem = new FirebaseGrocery(
+              result.key,
+              result.value.name,
+              result.value.done || false,
+              result.value.deleted || false,
+              result.value.dateCreated
+            );
+            this.updateListItem(newItem);
+            // this.allItems.push(newItem);
+          } else if (result.type === "ChildRemoved") {
+            this.deleteListItem(result.key);
+          }
         }
     }, this.groceriesRef).then( (listenerWrapper) => {
 
       // save for latter removal
-      console.log("listener:" + JSON.stringify(listenerWrapper));
+      console.log("listener:" + JSON.stringify(listenerWrapper));  // DEBUG
 
       if (listenerWrapper) {
         this.backend.listeners.push({
@@ -52,7 +60,7 @@ export class GroceryFirebaseService {
         });
       }
 
-      console.log("Grocery listener added...");
+      console.log("Grocery listener added...");  // DEBUG
 
       // return Promise.resolve(this.allItems);
     }).catch(this.handleErrors);
@@ -112,7 +120,7 @@ export class GroceryFirebaseService {
             this.syncItem(grocery);
           }
         });
-        this.publishUpdates()
+        // this.publishUpdates()
         resolve();
       } catch (ex) {
            reject(ex);
