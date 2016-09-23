@@ -69,6 +69,7 @@ export class LoginComponent implements OnInit {
 
     this.userService.login(this.user)
       .then(() => {
+        console.log("Email:" + this.user.email); // DEBUG
         this.isAuthenticating = false;
         this.router.navigate(["/"]);
       })

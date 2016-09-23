@@ -1,4 +1,5 @@
 import { Component, ChangeDetectionStrategy, EventEmitter, Input, Output } from "@angular/core";
+import * as utils from "utils/utils";
 
 import { FirebaseGrocery, GroceryFirebaseService } from "../shared";
 import { alert } from "../../shared";
@@ -38,7 +39,8 @@ export class GroceryListComponent {
   makeBackgroundTransparent(args) {
     let cell = args.ios;
     if (cell) {
-      cell.backgroundColor = UIColor.clearColor();
+       // support XCODE 8
+      cell.backgroundColor = utils.ios.getter(UIColor, UIColor.clearColor);
     }
   }
 

@@ -42,12 +42,15 @@ export class LoginFirebaseService {
   }
 
   login(user: User) {
+   console.log("Login Service : login - " + JSON.stringify(user));
    return this.backend.fb.login({
+
       type: this.backend.fb.LoginType.PASSWORD,
       email: user.email,
       password: user.password
     }).then((data) => {
       // console.log("User Logged In");
+      console.log("Login:" + JSON.stringify(data)); // DEBUG
       return Promise.resolve();
     }).catch(this.handleErrors);
   }

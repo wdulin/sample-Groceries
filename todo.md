@@ -62,7 +62,7 @@
 ## Troubleshooting:
 
 
-Logging Off raises the following error in Android Emulator:
+1. Logging Off raises the following error in Android Emulator:
 
 com.tns.NativeScriptException: 
 Calling js method onCancelled failed
@@ -83,6 +83,19 @@ Error: java.lang.AbstractMethodError: abstract method "void com.google.firebase.
     android.os.Looper.loop(Looper.java:135)
     android
 
+    Resolved: Updated version of nativescript-plugin-firebase fixed.
+
+2. Incompatibility with Xcode 8. 
+
+        OS_ACTIVITY_MODE = disable environment variable stops emulator from 
+        producing a deluge of log output
+
+
+
+3. iOS build throws "Could not locate configuration file: 'GoogleService-Info.plist'." on execution in emulator.
+
+4. iOS build throws "Class PLBuildVersion is implemented in both..." on execution in emulator.
+
 ## Child Changed Event
 
 {"type":"ChildAdded","key":"-KS1l7Inwa1RVCXpWTq6","value":{"name":"Milk","done":false,"deleted":false,"dateCreated":1474293957917,"key":""}}
@@ -92,3 +105,8 @@ Error: java.lang.AbstractMethodError: abstract method "void com.google.firebase.
 {"type":"ChildChanged","key":"-KS1l7Inwa1RVCXpWTq6","value":{"done":true,"deleted":false}}
 {"type":"ChildChanged","key":"-KS1l7Inwa1RVCXpWTq6","value":{"done":false,"deleted":true}}
 {"type":"ChildRemoved","key":"-KS1l7Inwa1RVCXpWTq6","value":{"done":false,"deleted":true}}
+
+
+
+CONSOLE LOG file:///app/shared/login.firebase.service.js:49:20: Login Service : login - {"email":"groceryapp@kingsburytx.com","password":"password"}
+CONSOLE LOG file:///app/shared/login.firebase.service.js:78:20: "An error occurred when accessing the keychain. The @c NSLocalizedFailureReasonErrorKey field in the @c NSError.userInfo dictionary will contain more information about the error encountered"

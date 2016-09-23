@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "805653193931",
+    "firebase_url": "https://ns-groceries-firebase.firebaseio.com",
+    "project_id": "ns-groceries-firebase",
+    "storage_bucket": "ns-groceries-firebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:805653193931:android:cd83f8f922f8aad3",
+        "android_client_info": {
+          "package_name": "com.kingsburyit.nsgroceriesfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "805653193931-e21j43omvvisos7t31jpgq7h4es91qr2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdaz11RBL3q8NZs-B3zN9cUMTQdOqIu8c"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
