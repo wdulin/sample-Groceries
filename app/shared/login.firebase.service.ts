@@ -5,7 +5,6 @@ import { getString, setString } from "application-settings";
 import { User } from "./user.model";
 import { BackendFirebaseService } from "./backend.firebase.service";
 
-// const tokenKey = "token";
 
 @Injectable()
 export class LoginFirebaseService {
@@ -15,21 +14,8 @@ export class LoginFirebaseService {
     return this.backend.loggedIn;
   }
 
-  /*
-  private get token(): string {
-    return getString(tokenKey);
-  }
-  private set token(theToken: string) {
-    setString(tokenKey, theToken);
-  }
-  */
 
   constructor(private backend: BackendFirebaseService, private router: Router) {
-    /*  
-    if (this.token) {
-      this.backend.fb.authentication.setAuthorization(this.token, "bearer");
-    }
-    */
   }
 
   register(user: User) {
@@ -59,7 +45,7 @@ export class LoginFirebaseService {
   logoff() {
     this.backend.clearListeners();
     this.backend.fb.logout().then( () => {
-      this.router.navigate(['/login']);
+      this.router.navigate(["/login"]);
       console.log("Log Out"); // DEBUG
     }).catch(this.handleErrors);
   }

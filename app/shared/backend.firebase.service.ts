@@ -48,37 +48,6 @@ export class BackendFirebaseService {
       }
     );
   }
-  /*
-  setupConnectionMonitoring() {
-    this.handleOnlineOffline();
-    this.lastOnlineState = getConnectionType();
-    startMonitoring(() => {
-
-     this.handleOnlineOffline();
-
-      // If the user comes back online sync any changes they
-      // made while offline.
-      if (getConnectionType() !== connectionType.none
-        && this.lastOnlineState === connectionType.none) {
-        this.fb.sync();
-      }
-
-      this.lastOnlineState = getConnectionType();
-    });
-  }
-  */
-
-  // Everlive must be explicitly set to online or offline mode
-  // el.offline - sets the SDK to work offline
-  // el.online - sets the SDK to work online
-  /*
-  private handleOnlineOffline() {
-    if (getConnectionType() === connectionType.none) {
-      this.fb.offline();
-    } else {
-      this.fb.online();
-    }
-  }
-  */
+  
 }
  

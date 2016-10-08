@@ -1,5 +1,22 @@
 # Groceries Sample Application Using Firebase as a Backend
 
+Howdy folks! Heres an example of the Nativescript Groceries Sample with Firebase
+integration. Although the original [sample-Groceries](https://github.com/NativeScript/sample-Groceries) repo has a 
+Firebase branch, it shares user data between all registered users. This version uses
+the recommended method of keeping each user's records in a separate tree under the 
+corresponding user key.
+
+* Firebase Backend
+* Each user has own data tree
+* Compatible with Xcode 8 API changes
+
+
+## Try it out
+
+
+
+
+
 
 
 
