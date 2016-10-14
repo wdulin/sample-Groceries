@@ -26,7 +26,7 @@ corresponding user key.
 
 Groceries is a NativeScript-built iOS and Android app for managing grocery lists. You can learn how to build a version of this app from scratch using either our [JavaScript getting started guide](http://docs.nativescript.org/tutorial/chapter-0), or our [TypeScript and Angular 2 getting started guide](http://docs.nativescript.org/angular/tutorial/ng-chapter-0).
 -->
-<!-- * [Download](#download) -->
+<!-- * [Download](#download) 
 <h2> Original README.md content below </h2>
 
 * [Branches](#branches)
@@ -37,7 +37,7 @@ Groceries is a NativeScript-built iOS and Android app for managing grocery lists
     * [Travis CI](#travis)
     * [Telerik Platform](#telerik-platform)
 * [Contributors](#contributors)
-
+-->
 <!--
 Commenting this out for now because until Groceries 3.0 drops (see https://github.com/NativeScript/sample-Groceries/issues/78), the version of the app in the stores and this repo don’t match up. Commenting this out == confusion-- (hopefully).
 
@@ -51,7 +51,7 @@ The latest version of Groceries is available on the iOS App Store as well as Goo
 <a href="https://play.google.com/store/apps/details?id=org.nativescript.groceries&hl=en">
   <img src="assets/app-store-icons/google-play.png">
 </a>
--->
+
 
 <h2 id="branches">Branches</h2>
 
@@ -167,9 +167,13 @@ The following is a list of all the people that have helped build Groceries. Than
 [<img alt="nadyaA" src="https://avatars.githubusercontent.com/u/6064810?v=3&s=117" width="117">](https://github.com/nadyaA)[<img alt="cmelo" src="https://avatars.githubusercontent.com/u/872461?v=3&s=117" width="117">](https://github.com/cmelo)[<img alt="NathanWalker" src="https://avatars.githubusercontent.com/u/457187?v=3&s=117" width="117">](https://github.com/NathanWalker)[<img alt="nsndeck" src="https://avatars.githubusercontent.com/u/5665150?v=3&s=117" width="117">](https://github.com/nsndeck)[<img alt="TsvetanMilanov" src="https://avatars.githubusercontent.com/u/10463529?v=3&s=117" width="117">](https://github.com/TsvetanMilanov)[<img alt="valentinstoychev" src="https://avatars.githubusercontent.com/u/4980822?v=3&s=117" width="117">](https://github.com/valentinstoychev)
 
 [<img alt="bradmartin" src="https://avatars.githubusercontent.com/u/6006148?v=3&s=117" width="117">](https://github.com/bradmartin)[<img alt="covex-nn" src="https://avatars.githubusercontent.com/u/110878?v=3&s=117" width="117">](https://github.com/covex-nn)
+-->
 
 <!-- Note: The table above get generated with the following commands -->
 <!-- npm install -g githubcontrib -->
 <!-- githubcontrib --owner NativeScript --repo sample-Groceries --cols 6 --sortOrder desc | pbcopy -->
 
+<!--
 ![](https://ga-beacon.appspot.com/UA-111455-24/nativescript/sample-groceries?pixel)
+
+-->
